@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51E85631EF07EFD00A421FA /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E85611EF07EFD00A421FA /* BaseTransition.swift */; };
+		A51E85641EF07EFD00A421FA /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E85621EF07EFD00A421FA /* FadeTransition.swift */; };
 		A5F966181EB18E4B001D072B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F966171EB18E4B001D072B /* AppDelegate.swift */; };
 		A5F9661A1EB18E4B001D072B /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F966191EB18E4B001D072B /* CardsViewController.swift */; };
 		A5F9661D1EB18E4B001D072B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F9661B1EB18E4B001D072B /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A51E85611EF07EFD00A421FA /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		A51E85621EF07EFD00A421FA /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 		A5F966141EB18E4B001D072B /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F966171EB18E4B001D072B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5F966191EB18E4B001D072B /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				A5F966291EB19450001D072B /* DraggableImageView.xib */,
 				A5F9662B1EB19485001D072B /* DraggableImageView.swift */,
 				A5F9662D1EB1A296001D072B /* ProfileViewController.swift */,
+				A51E85611EF07EFD00A421FA /* BaseTransition.swift */,
+				A51E85621EF07EFD00A421FA /* FadeTransition.swift */,
 			);
 			path = Tinder;
 			sourceTree = "<group>";
@@ -148,8 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5F9661A1EB18E4B001D072B /* CardsViewController.swift in Sources */,
+				A51E85631EF07EFD00A421FA /* BaseTransition.swift in Sources */,
 				A5F9662C1EB19485001D072B /* DraggableImageView.swift in Sources */,
 				A5F9662E1EB1A296001D072B /* ProfileViewController.swift in Sources */,
+				A51E85641EF07EFD00A421FA /* FadeTransition.swift in Sources */,
 				A5F966181EB18E4B001D072B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +320,7 @@
 				A5F966281EB18E4B001D072B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

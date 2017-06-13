@@ -7,13 +7,17 @@
 //
 
 import UIKit
-var profileImage: UIImage?
-class ProfileViewController: UIViewController {
 
+class ProfileViewController: UIViewController {
+    var profileImage: UIImage?
+
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var navBarImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        profileImageView.image = profileImage
     }
 
     override func didReceiveMemoryWarning() {
