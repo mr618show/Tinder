@@ -31,25 +31,36 @@ class CardsViewController: UIViewController {
     }
 
     func TappedOnImage(sender: UITapGestureRecognizer) {
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let profileVC = mainStoryboard.instantiateViewController(withIdentifier: "profileVC") as! ProfileViewController
-        self.present(profileVC, animated: true, completion: nil)
- 
         
+        //The following code create modal segue programmatically,however the fade effect won't show properly
+        /*let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let profileVC = mainStoryboard.instantiateViewController(withIdentifier: "profileVC") as! ProfileViewController
+        let draggableImageView = sender.view as! DraggableImageView
+        profileVC.profileImage = draggableImageView.profileImage
+       // self.present(profileVC, animated: true, completion: nil)
+         // create a FadeTransition instance
+         fadeTransition = FadeTransition()
+         profileVC.transitioningDelegate = fadeTransition
+         // adjust the transition duration
+         fadeTransition.duration = 0.7*/
+
+        
+        let image = sender.view as! DraggableImageView
+        performSegue(withIdentifier: "profileSegue", sender: image)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        let destinationVC = segue.destination as! ProfileViewController
-        let draggableImageView = sender as! DraggableImageView
-        destinationVC.modalPresentationStyle = UIModalPresentationStyle.custom
-        destinationVC.profileImage = draggableImageView.profileImage
-        // create a FadeTransition instance
-        fadeTransition = FadeTransition()
-        destinationVC.transitioningDelegate = fadeTransition
-        
-        // adjust the transition duration
-        fadeTransition.duration = 0.7
-   
+        if segue.identifier == "profileSegue" {
+            let destinationVC = segue.destination as! ProfileViewController
+            let draggableImageView = sender as! DraggableImageView
+            destinationVC.modalPresentationStyle = UIModalPresentationStyle.custom
+            destinationVC.profileImage = draggableImageView.profileImage
+            // create a FadeTransition instance
+            fadeTransition = FadeTransition()
+            destinationVC.transitioningDelegate = fadeTransition
+            // adjust the transition duration
+            fadeTransition.duration = 0.7
+        }
     }
 }
 

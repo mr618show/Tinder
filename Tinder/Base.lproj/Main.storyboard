@@ -37,6 +37,7 @@
                     <navigationItem key="navigationItem" id="Gh3-Dh-oRi"/>
                     <connections>
                         <outlet property="imageView" destination="OVO-j3-dSW" id="YhM-b1-KWm"/>
+                        <segue destination="eF1-0J-IQg" kind="modal" identifier="profileSegue" id="wVZ-WV-CDW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
